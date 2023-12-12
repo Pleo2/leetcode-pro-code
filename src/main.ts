@@ -1,24 +1,26 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import containsDuplicate from './array-&-hashing/constains-duplicates.ts'
+import isAnagram from './array-&-hashing/valid-anagram.ts'
+import twoSum from './array-&-hashing/two-sum.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
+    <a href="https://leetcode.com/Pleo2/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LeetCode_Logo_black_with_text.svg/2560px-LeetCode_Logo_black_with_text.svg.png" class="logo" alt="leetcode logo" />
     </a>
     <a href="https://www.typescriptlang.org/" target="_blank">
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
+    <h1>leetCode + TypeScript</h1>
     <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
+      Click on the leetcode and TypeScript logos to learn more
     </p>
   </div>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// to run the code uncomment the call function
+// containsDuplicate([1, 2, 4, 5, 6, 6, 5, 1, 2, 5, 4])
+// isAnagram('eat', 'ate')
+// twoSum([2,7,11,15], 9)
