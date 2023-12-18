@@ -1,9 +1,8 @@
 import './style.css'
 import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter.ts'
-import containsDuplicate from './array-&-hashing/constains-duplicates.ts'
-import isAnagram from './array-&-hashing/valid-anagram.ts'
-import twoSum from './array-&-hashing/two-sum.ts'
+// import containsDuplicate from './array-&-hashing/constains-duplicates.ts'
+// import isAnagram from './array-&-hashing/valid-anagram.ts'
+// import  twoSum3 from './array-&-hashing/two-sum.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -22,5 +21,5 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 
 // to run the code uncomment the call function
 // containsDuplicate([1, 2, 4, 5, 6, 6, 5, 1, 2, 5, 4])
-// isAnagram('eat', 'ate')
-// twoSum([2,7,11,15], 9)
+// console.log(isAnagram('arepera', 'arepera'))
+// console.log(twoSum3([2,7,11,15], 9))
