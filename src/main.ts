@@ -3,6 +3,7 @@ import typescriptLogo from './typescript.svg'
 // import containsDuplicate from './array-&-hashing/constains-duplicates.ts'
 // import isAnagram from './array-&-hashing/valid-anagram.ts'
 // import  twoSum3 from './array-&-hashing/two-sum.ts'
+// import topKFrequent from './array-&-hashing/topKfrequent'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -23,3 +24,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 // containsDuplicate([1, 2, 4, 5, 6, 6, 5, 1, 2, 5, 4])
 // console.log(isAnagram('arepera', 'arepera'))
 // console.log(twoSum3([2,7,11,15], 9))
+// console.log(topKFrequent([1, 1, 1, 2, 2, 3, 4, 4, 4, 4], 2))
