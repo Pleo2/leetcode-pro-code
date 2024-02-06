@@ -4,7 +4,8 @@ import typescriptLogo from './typescript.svg'
 // import isAnagram from './array-&-hashing/valid-anagram.ts'
 // import  twoSum3 from './array-&-hashing/two-sum.ts'
 // import topKFrequent from './array-&-hashing/topKfrequent'
-import productExceptSelf from './array-&-hashing/product-arr-except-self'
+// import productExceptSelf from './array-&-hashing/product-arr-except-self'
+import isValidSudoku from "./array-&-hashing/ValidSudoku"
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -26,5 +27,16 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 // console.log(isAnagram('arepera', 'arepera'))
 // console.log(twoSum3([2,7,11,15], 9))
 // console.log(topKFrequent([1, 1, 1, 2, 2, 3, 4, 4, 4, 4], 2))
-
-console.log(productExceptSelf([1,2,3,4]))
+// console.log(productExceptSelf([1,2,3,4]))
+console.log(isValidSudoku([
+  ["5","3",".",".","7",".",".",".","."]
+,["6",".",".","1","9","5",".",".","."]
+,[".","9","8",".",".",".",".","6","."]
+,["8",".",".",".","6",".",".",".","3"]
+,["4",".",".","8",".","3",".",".","1"]
+,["7",".",".",".","2",".",".",".","6"]
+,[".","6",".",".",".",".","2","8","."]
+,[".",".",".","4","1","9",".",".","5"]
+,[".",".",".",".","8",".",".","7","9"]
+]
+))
