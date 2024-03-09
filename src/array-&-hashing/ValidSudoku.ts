@@ -23,44 +23,45 @@ Only the filled cells need to be validated according to the mentioned rules.
 
  */
 
-export default function isValidSudoku(board: string[][]): any {
-    isRowItemRepeat(board)
-    // map  colums of the array
+export default function isValidSudoku(board: string[][]): boolean {
+    // finish of understand the code tomorrow
+    const rows: Record<number, Set<string>> = {};
+    const cols: Record<number, Set<string>> = {};
+    const squares: Record<number, Set<string>> = {};
 
-    const arrayAgrupado = board.map((row, idxRow) => {
-        return row.map((item, idxColumn) => {
-            return {
-                idxColumn,
-                idxRow,
-                item,
+    for (let r = 0; r < board.length ; r++) {
+        for (let c = 0; c < 9; c++) {
+            const num = board[r][c];
+            
+            if (num === '.') {
+                continue;
             }
-        })
-    })
 
-    const columnArr = new Array(9).fill([])
-
-    for (let i = 0; i < arrayAgrupado.length; i++) {
-        const element = arrayAgrupado[i];
-
-        for (let index = 0; index < element.length; index++) {
-            const item = element[index];
-            if(item.idxColumn === index) {
-                columnArr[i].push(item.item)
+            const grid: string = `${Math.floor(r / 3)}${Math.floor(c / 3)}`;
+            if (!cols[c]) {
+                cols[c] = new Set();
             }
+            if (!rows[r]) {
+                rows[r] = new Set();
+            }
+            if (!squares[grid]) {
+                squares[grid] = new Set();
+            }
+
+            if (
+                rows[r].has(num) ||
+                cols[c].has(num) ||
+                squares[grid].has(num)
+            ) {
+                return false;
+            }
+
+            cols[c].add(num);
+            rows[r].add(num);
+            squares[grid].add(num);
         }
     }
-    
-    console.log(columnArr)
+
+    return true;
 }
 
-function isRowItemRepeat(board: string[][]): boolean | string {
-    for (let idx = 0; idx < board.length; idx++) {
-        const element = board[idx]
-        const row = element.filter(item => item !== '.')
-        const set = new Set(row)
-        if (set.size !== row.length) {
-            return false
-        }
-    }
-    return 'no repeat'
-}
